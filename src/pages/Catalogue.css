@@ -1,0 +1,97 @@
+.catalogue {
+  padding-top: var(--nav-h);
+}
+
+.catalogue__hero {
+  padding: 5rem 0 3rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.catalogue__eyebrow {
+  font-size: 0.65rem;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--rose-dark);
+  margin-bottom: 1rem;
+  animation: fadeUp 0.6s ease forwards;
+  opacity: 0;
+}
+
+.catalogue__title {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 400;
+  color: var(--creme);
+  margin-bottom: 1rem;
+  animation: fadeUp 0.6s 0.1s ease forwards;
+  opacity: 0;
+}
+
+.catalogue__subtitle {
+  font-size: 0.85rem;
+  color: var(--creme-dim);
+  animation: fadeUp 0.6s 0.2s ease forwards;
+  opacity: 0;
+}
+
+/* =============================================
+   BODY
+   ============================================= */
+.catalogue__body {
+  padding: 3rem 0 6rem;
+}
+
+/* =============================================
+   FILTRES
+   ============================================= */
+.catalogue__filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+.filter-btn {
+  font-size: 0.7rem;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--creme-dim);
+  border: 1px solid var(--border);
+  padding: 0.5rem 1.2rem;
+  border-radius: 20px;
+  transition: all 0.3s;
+  background: transparent;
+}
+.filter-btn:hover {
+  color: var(--rose-light);
+  border-color: var(--border-hover);
+}
+.filter-btn--active {
+  background: var(--rose);
+  color: var(--noir);
+  border-color: var(--rose);
+}
+
+/* =============================================
+   COMPTEUR
+   ============================================= */
+.catalogue__count {
+  font-size: 0.75rem;
+  color: var(--rose-dark);
+  letter-spacing: 0.1em;
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+/* =============================================
+   RESPONSIVE
+   ============================================= */
+@media (max-width: 900px) {
+  .product-grid--3 { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 600px) {
+  .product-grid--3 { grid-template-columns: 1fr; }
+}
